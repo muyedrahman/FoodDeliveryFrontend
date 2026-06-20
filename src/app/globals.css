@@ -2,26 +2,75 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 210 20% 98%; /* #F7FAFC - Light BG */
+    --foreground: 220 23% 15%; /* Dark text */
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 23% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 23% 15%;
+
+    --primary: 17 100% 60%; /* Orange #FF6B35 */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 23% 23%; /* Dark Gray #2D3748 */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 20% 92%;
+    --muted-foreground: 220 23% 40%;
+
+    --accent: 145 47% 51%; /* Green #48BB78 */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 23% 90%;
+    --input: 220 23% 90%;
+    --ring: 17 100% 60%;
+
+    --radius: 0.75rem; /* 12px - rounded-xl */
+  }
+
+  .dark {
+    --background: 220 23% 10%; /* Dark slate background */
+    --foreground: 210 20% 98%;
+
+    --card: 220 23% 14%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 220 23% 14%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 17 100% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 23% 23%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 220 23% 20%;
+    --muted-foreground: 210 20% 70%;
+
+    --accent: 145 47% 51%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 50.6%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 220 23% 20%;
+    --input: 220 23% 20%;
+    --ring: 17 100% 60%;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
   }
 }
