@@ -24,6 +24,7 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en" suppressHydrationWarning>
         <body className={`${inter.variable} font-sans antialiased`}>
+          
           <Providers>{children}</Providers>
         </body>
       </html>
