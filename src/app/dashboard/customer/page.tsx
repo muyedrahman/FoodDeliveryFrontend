@@ -50,11 +50,26 @@ export default function CustomerDashboard() {
             asChild
             variant="ghost"
             size="sm"
+            className="font-semibold text-primary hover:text-primary/95"
+          >
+            <Link
+              href="/dashboard/customer/orders"
+              className="flex items-center gap-1"
+            >
+              View All
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </Button>
+
+          {/* <Button
+            asChild
+            variant="ghost"
+            size="sm"
             className="font-semibold text-primary hover:text-primary/95 flex items-center gap-1"
           >
             <Link href="/dashboard/customer/orders">View All</Link>
             <ArrowRight className="h-4 w-4" />
-          </Button>
+          </Button> */}
         </CardHeader>
         <CardContent className="flex flex-col gap-4">
           {RECENT_ORDERS.map((order) => (
