@@ -1,3 +1,4 @@
+// layout.tsx;
 import Sidebar from "@/components/dashboard/Sidebar";
 import DashboardNav from "@/components/dashboard/DashboardNav";
 
