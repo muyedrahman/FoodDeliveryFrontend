@@ -62,6 +62,7 @@ export interface FoodItem {
   calories: number;
   ingredients: string[];
   reviews: FoodReview[];
+  isFeatured?: boolean; //
 }
 
 export type SortOption = "popular" | "price-asc" | "price-desc" | "rating";
