@@ -28,7 +28,7 @@ export interface RestaurantProfile {
   coverImage: string;
   cuisineType: string[];
   rating: number;
-  reviewsCount: number;
+  reviewCount: number; // reviewsCount
   deliveryTime: number; // average delivery time
   deliveryFee: number;
   minOrder: number;
