@@ -108,7 +108,7 @@ const MOCK_FOODS: FoodItem[] = [
     price: 18.99,
     image:
       "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&auto=format&fit=crop&q=60",
-    category: "Burgers",
+    category: "Burger",
     rating: 4.9,
     preparationTime: 15,
     isAvailable: true,
