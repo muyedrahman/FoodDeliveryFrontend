@@ -10,7 +10,7 @@ export default function FeaturedFoods() {
   const { data: foods, isLoading } = useFoods();
 
   // Show only featured foods, limit to 3 items for homepage
-  const featuredFoods = foods ? foods.filter((f) => f.isFeatured).slice(0, 3) : [];
+  const featuredFoods = foods ? foods.filter((f : any) => f.isFeatured).slice(0, 3) : [];
 
   return (
     <section className="py-16 bg-neutral/40 border-y">
