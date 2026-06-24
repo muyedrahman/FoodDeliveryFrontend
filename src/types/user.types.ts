@@ -28,8 +28,8 @@ export interface RestaurantProfile {
   coverImage: string;
   cuisineType: string[];
   rating: number;
-  reviewCount: number; // reviewsCount
-  deliveryTime: number; // average delivery time
+  reviewCount: number;  
+  deliveryTime: number;  
   deliveryFee: number;
   minOrder: number;
   address: UserAddress;

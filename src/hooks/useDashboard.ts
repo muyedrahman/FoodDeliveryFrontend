@@ -7,7 +7,7 @@ import { useCallback } from "react";
 const API_URL =
   process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000/api/v1";
 
-// ─── Generic authenticated fetch ───────────────────────────────────────────
+// ─── Generic authenticated fetch 
 export function useAuthFetch() {
   const { getToken } = useAuth();
 
@@ -31,7 +31,7 @@ export function useAuthFetch() {
   return authFetch;
 }
 
-// ─── Admin: Users ───────────────────────────────────────────────────────────
+// ─── Admin: Users  
 export function useAdminUsers() {
   const authFetch = useAuthFetch();
   return useQuery({
@@ -53,7 +53,7 @@ export function useUpdateUserRole() {
   });
 }
 
-// ─── Admin: Dashboard Stats ─────────────────────────────────────────────────
+// Admin: Dashboard Stats  
 export function useAdminStats() {
   const authFetch = useAuthFetch();
   return useQuery({
@@ -62,7 +62,7 @@ export function useAdminStats() {
   });
 }
 
-// ─── Admin: All Orders ──────────────────────────────────────────────────────
+// Admin: All Orders 
 export function useAdminOrders() {
   const authFetch = useAuthFetch();
   return useQuery({
@@ -74,7 +74,7 @@ export function useAdminOrders() {
   });
 }
 
-// ─── Admin: All Restaurants ─────────────────────────────────────────────────
+// Admin: All Restaurants ─ 
 export function useAdminRestaurants() {
   const authFetch = useAuthFetch();
   return useQuery({
@@ -86,7 +86,7 @@ export function useAdminRestaurants() {
   });
 }
 
-// ─── Restaurant Owner: Stats ─────────────────────────────────────────────────
+// ─ Restaurant Owner: Stats  
 export function useRestaurantStats() {
   const authFetch = useAuthFetch();
   return useQuery({
@@ -95,7 +95,7 @@ export function useRestaurantStats() {
   });
 }
 
-// ─── Restaurant Owner: Orders ────────────────────────────────────────────────
+//  Restaurant Owner: Orders ─ 
 export function useRestaurantOrders() {
   const authFetch = useAuthFetch();
   return useQuery({
@@ -107,7 +107,7 @@ export function useRestaurantOrders() {
   });
 }
 
-// ─── Restaurant Owner: Menu (Foods) ─────────────────────────────────────────
+// ─  Restaurant Owner: Menu (Foods) ── 
 export function useRestaurantMenu() {
   const authFetch = useAuthFetch();
   return useQuery({
@@ -128,7 +128,7 @@ export function useDeleteFood() {
   });
 }
 
-// ─── Update Order Status (Restaurant + Admin) ────────────────────────────────
+//    Update Order Status (Restaurant + Admin) 
 export function useUpdateOrderStatus() {
   const authFetch = useAuthFetch();
   const qc = useQueryClient();
@@ -146,7 +146,7 @@ export function useUpdateOrderStatus() {
   });
 }
 
-// ─── Customer: Orders ────────────────────────────────────────────────────────
+//  Customer: Orders  
 export function useCustomerOrders() {
   const authFetch = useAuthFetch();
   return useQuery({
@@ -158,7 +158,7 @@ export function useCustomerOrders() {
   });
 }
 
-// ─── Customer: Dashboard Stats ───────────────────────────────────────────────
+//  Customer: Dashboard Stats  
 export function useCustomerStats() {
   const authFetch = useAuthFetch();
   return useQuery({
@@ -167,7 +167,7 @@ export function useCustomerStats() {
   });
 }
 
-// ─── User Profile ────────────────────────────────────────────────────────────
+//  User Profile 
 export function useUserProfile() {
   const authFetch = useAuthFetch();
   return useQuery({
